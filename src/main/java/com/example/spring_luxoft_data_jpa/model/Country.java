@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 
-@Entity
+@Entity(name = "Country")
 @Table(name = "COUNTRY")
 public class Country implements Serializable{
 

@@ -36,7 +36,6 @@ class SpringLuxoftDataJpaApplicationTests {
 
 
 	@Test
-	@DirtiesContext
 	public void testCountryList() {
 		List<Country> countryList = countryRepository.getCountryList();
 		Assertions.assertNotNull(countryList);
@@ -47,7 +46,6 @@ class SpringLuxoftDataJpaApplicationTests {
 	}
 
 	@Test
-	@DirtiesContext
 	public void testCountryListStartsWithA() {
 		List<Country> countryList = countryRepository.getCountryListStartWith("A");
 		Assertions.assertNotNull(countryList);
@@ -58,7 +56,6 @@ class SpringLuxoftDataJpaApplicationTests {
 	}
 
 	@Test
-	@DirtiesContext
 	public void testCountryChange() {
 		countryRepository.updateCountryName("RU", "Russia");
 		Assertions.assertEquals(countryWithChangedName, countryRepository.getCountryByCodeName("RU"));
